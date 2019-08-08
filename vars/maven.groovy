@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 
 def call(maven) {
-    
+  pipeline {
     stages {
         stage('clean') { 
             steps {
@@ -19,4 +19,5 @@ def call(maven) {
             }
         }
     }
+  }
 }
