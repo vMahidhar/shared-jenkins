@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 
-def maven(body) {
+def call(maven) {
     
     stages {
         stage('clean') { 
