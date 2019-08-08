@@ -3,6 +3,9 @@
 def call(maven) {
   
   node {
+          stage('clean previous repo') { 
+                sh 'rm -rf pipeline-library-demo' 
+          }
           stage('git clone') { 
                 sh 'git clone https://github.com/vMahidhar/pipeline-library-demo.git' 
           }
