@@ -3,6 +3,12 @@
 def call(maven) {
   
   node {
+          stage('git clone') { 
+                sh 'git clone https://github.com/vMahidhar/pipeline-library-demo.git' 
+          }
+          stage('echo') { 
+                echo 'cloned project' 
+          }   
           stage('clean') { 
                 sh 'mvn clean' 
           }
