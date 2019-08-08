@@ -2,8 +2,7 @@
 
 def call(maven) {
   
-  pipeline {
-    
+  node {
           stage('clean') { 
                 sh 'mvn clean' 
           }
