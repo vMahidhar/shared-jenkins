@@ -3,10 +3,6 @@
 def call(maven) {
   
   node {
-          tools { 
-            maven 'Maven 3.6.1' 
-            jdk 'jdk8' 
-          }
           stage('clean previous repo') { 
                 sh 'rm -rf pipeline-library-demo' 
           }
