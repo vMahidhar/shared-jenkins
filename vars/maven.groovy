@@ -13,13 +13,13 @@ def call(maven) {
                 echo 'cloned project' 
           }   
           stage('clean') { 
-                sh 'mvn clean' 
+                sh 'mvn clean -f pipeline-library-demo' 
           }
           stage('validate') { 
-                  sh 'mvn validate' 
+                  sh 'mvn validate -f pipeline-library-demo' 
           }
           stage('Deploy') { 
-                  sh 'mvn package'
+                  sh 'mvn package -f pipeline-library-demo'
           }
     }
 }
