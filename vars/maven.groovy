@@ -1,5 +1,7 @@
 #!/usr/bin/env groovy
 
+def maven(body) {
+    
     stages {
         stage('clean') { 
             steps {
@@ -17,3 +19,4 @@
             }
         }
     }
+}
