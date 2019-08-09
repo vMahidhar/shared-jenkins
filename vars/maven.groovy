@@ -9,8 +9,11 @@ def call(maven) {
           stage ('clone Project') {
                 sh 'git clone https://github.com/vMahidhar/pipeline-library-demo.git'
           }
+          stage('Change Working Directory') { 
+                sh 'cd pipeline-library-demo' 
+          }
           stage('clean') { 
-                sh 'mvn clean -f pipeline-library-demo/' 
+                sh 'mvn clean' 
           }
           stage('validate') { 
                   sh 'mvn validate' 
