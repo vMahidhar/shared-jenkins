@@ -10,7 +10,7 @@ def call(maven) {
                 sh 'git clone https://github.com/vMahidhar/pipeline-library-demo.git'
           }
           stage('clean') { 
-                sh 'mvn clean' 
+                sh 'mvn clean -f pipeline-library-demo' 
           }
           stage('validate') { 
                   sh 'mvn validate' 
