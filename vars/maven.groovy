@@ -13,7 +13,7 @@ def call(maven) {
                 sh 'cd pipeline-library-demo' 
           }
           stage('clean') { 
-                sh 'mvn clean -f /root/.jenkins/workspace/test/pipeline-library-demo' 
+                sh 'mvn clean -f /root/.jenkins/workspace/test/pipeline-library-demo/pom.xml' 
           }
           stage('validate') { 
                   sh 'mvn validate' 
